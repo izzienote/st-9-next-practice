@@ -2,8 +2,8 @@ export default async function Home() {
   const res = await fetch("http://localhost:4000/intro", {
     cache: "force-cache",
   });
-  const { data } = await res.json();
-  console.log(data);
+  const introData: Intro = await res.json();
+  console.log(introData);
 
   return (
     <div className="home-container">
